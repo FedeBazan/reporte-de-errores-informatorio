@@ -1,0 +1,711 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Testing</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="05d40b05-92e7-487c-89fd-7c59cdcb58a1" class="page sans"><header><h1 class="page-title">Testing</h1><p class="page-description"></p></header><div class="page-body"><h3 id="006b3ac0-891e-4f09-b0cc-0731dfca1d94" class="">Elementos utilizados:</h3><p id="02ecb622-816c-4b4e-9d21-f2a7f41ccc62" class="">Sistema:<div class="indented"><p id="18bcacf7-7187-4554-a955-64065723b14f" class="">Windows 10 pro versión: 19045.2965</p></div></p><p id="2ac0b9e5-1950-4112-8c8d-420e30953a3b" class="">Navegadores:<div class="indented"><p id="bb2ed80b-6b79-47ce-8c3b-5aba2a5a6d9f" class="">Edge: versión 113.0.1774.57 (Compilación oficial) (64 bits)</p><p id="1d26ad26-523c-4dfd-a626-69f06570ca82" class="">Chrome: versión 116.0.5803.2 (Build oficial) dev (64 bits)</p><p id="e83b9397-1e6b-4916-b5eb-4bc0bdbadb8f" class="">Brave:  <a href="https://brave.com/latest/">Versión 1.52.117 Chromium: 114.0.5735.90 (Build oficial) (64 bits)</a></p></div></p><p id="7abc47dc-e879-472a-95a7-625ecb3e288c" class="">
+</p><hr id="0183bdc0-515f-4e7e-9aea-368d65fbf0f6"/><h1 id="20dd2b4e-6bff-4a20-9ff2-d410a150a465" class="">Casos de testing</h1><hr id="1b591145-8ef1-4aee-ace2-c58f63111b73"/><p id="cf7de23d-2f15-425a-b0f4-f1b5ca215097" class="">
+</p><table id="006cbfec-f4cd-4aae-84bb-322c7a5785ce" class="simple-table"><tbody><tr id="dd63de41-5b7f-404a-a2ca-4cb83c516676"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">1</td></tr><tr id="fb020209-f168-4cb7-abc8-1d39b1e0ae62"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Crasheo de la página</td></tr><tr id="bf0bf2c5-8b3f-486a-a1eb-aa2b773fd430"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página en la sección de productos en venta, al momento de dar click a cualquiera de los dos botones de la parte superior del grid de productos para poder cambiar la cantidad de elementos mostrados, la página intenta cargar por aproximadamente 5 segundos y luego queda congelada.</td></tr><tr id="7c562cfa-f442-408b-b884-4bdd89b968d8"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="3a315836-2176-48d5-803b-5bc0b59e2601"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-red">Alta</mark></td></tr><tr id="51120800-758e-4c9f-8a9c-7caab5b1443d"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Funcional</td></tr><tr id="8e03a1b8-a120-4809-b7c2-abf4fd296fa8"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Intentar cambiar la cantidad de elementos con los botones superiores</td></tr><tr id="ff0465be-ebe2-44f6-8eef-50748cdb2ad3"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página queda congelada de manera indefinida</td></tr><tr id="1aba5e28-61c1-4f74-987a-76318cd29df3"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Que los botones cambien la cantidad de productos mostrados en el grid de la página</td></tr></tbody></table><p id="f35d7a72-0fd9-492c-8905-34607ac281a6" class="">Capturas:</p><figure id="b5f15ad3-86f2-4694-b7ca-669842cd9658" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/22.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/22.gif"/></a></figure><figure id="b0589a8a-4e0b-40ce-a13d-b206cf30a92d" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/21.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/21.png"/></a></figure><hr id="99a6be58-6944-4542-8760-a8fc05c61f4f"/><p id="ebd1d597-0508-46e9-a9ed-960e3b270f7a" class="">
+</p><p id="ebd63423-7430-4181-9592-cdf4f956815b" class="">
+</p><table id="32bc3713-62ce-4f53-8c10-e354e6b3df38" class="simple-table"><tbody><tr id="e9fe827d-2d0a-4a50-81d2-29f5939da37c"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">2</td></tr><tr id="41e393ec-761e-4d4c-ad99-0773cc641475"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Vinculo de twitter roto</td></tr><tr id="2995bee8-1ac5-4fa8-a969-411d93d47846"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página, ingresar a un producto en particular e intentar ingresar al twitter de la página, se abre otra pestaña con un vinculo roto ya que no carga nada</td></tr><tr id="3b34f637-0da2-475a-8fa7-68906463d6a7"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="9139cec8-25b4-4dbf-a951-1c548baf90e1"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-yellow">Media</mark></td></tr><tr id="3538da5a-d420-4c95-b74f-32a36e515829"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Componente</td></tr><tr id="2315da84-10b9-41e3-9e8c-ecdc15a137e8"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Ingresar a un producto de la lista
+3_Hacer click en el icono de twitter que se ubica debajo del precio y descripción del producto</td></tr><tr id="e48b7505-25a0-4fce-b532-0c409d8d3a97"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">Se abre otra pestaña con un link roto sin poder visualizar el twitter de la página</td></tr><tr id="3f7c9084-fa5e-451e-b021-4ba4a3d27aa3"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Ver en otra pestaña el twitter de la página de forma normal</td></tr></tbody></table><p id="9390bf82-303e-416b-9424-5a17c0f482b3" class="">Capturas:</p><figure id="7b5c8a6c-54d7-45b4-a900-503cb57fafb1" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/5.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/5.gif"/></a></figure><figure id="4065d79a-596e-49ad-b64d-4741a3171317" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/5.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/5.png"/></a></figure><hr id="25a2f8c8-11e4-489a-b772-fc653ff88d1a"/><p id="7d914cad-5b43-44b9-a2ea-8d0d4916955b" class="">
+</p><table id="e44ea3f4-8bf7-4163-a58a-b1caf6a7b9cb" class="simple-table"><tbody><tr id="08e1adcc-9a22-4562-9b27-08f6aa7d24b9"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">3</td></tr><tr id="3fd2da33-7cb2-4b91-9843-0e49bb67df59"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Crasheo de la página</td></tr><tr id="4d690163-eb14-4351-83f4-9dc750c5154f"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página, ingresar a un producto en particular e intentar cambiar el tipo de moneda a pagar, la página queda congelada de manera indefinida</td></tr><tr id="cf54a7eb-c925-407e-8ddf-9d4f7b2069a6"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="2ee3547d-2ddc-4c3d-8640-1eb6cedd6d3b"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-red">Alta</mark></td></tr><tr id="4db1286a-a722-445a-8684-5057e844d2ac"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Funcional</td></tr><tr id="8ac52c00-02a1-42e0-a94f-8fb6c7063750"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Ingresar a un producto de la lista
+3_Ir al panel derecho de la página
+4_Intentar cambiar el tipo de moneda utilizando la pestaña</td></tr><tr id="025902c5-0e8a-4611-92cb-3209db9d379f"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página queda congelada</td></tr><tr id="97fcdf21-2117-4dc7-8d0b-3096a7130fa3"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Poder cambiar el tipo de moneda a confeccionar el valor del producto</td></tr></tbody></table><p id="1bd7a2a2-f26f-40a5-9bec-403194e70fbd" class="">Capturas:</p><figure id="8952f4b2-c493-45ed-8e2e-35a66e79a74c" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/21.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/21.gif"/></a></figure><figure id="21f92171-2a7b-4ee5-b979-7086cc23cf26" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/22.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/22.png"/></a></figure><hr id="bd02b0d2-aedc-43b2-8960-5c4ed7bd28d0"/><table id="7a168016-8ef5-4f06-bc9c-a73f810e589d" class="simple-table"><tbody><tr id="343d3810-3b72-464c-b9fc-94448572ba37"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">4</td></tr><tr id="34424eae-d5b3-4b4e-9e9f-26aa07a86329"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Cantidad de productos</td></tr><tr id="48e83d8a-1b3e-4c35-b081-48c3b4061f38"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página, ingresar a un producto en particular, agregarlo al carro, luego ingresar al carro, al intentar cambiar la cantidad de productos del mismo tipo a llevar, si se supera la cantidad mayor a 2 y se da click al boton de “update” o “incrementar”, la página queda colgada</td></tr><tr id="ceb45fb3-7a57-4516-818a-6429d713d1d4"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="b70ec64b-0333-4df8-82df-f4b8b4de37c7"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-red">Alta</mark></td></tr><tr id="95133016-5b3e-4d3c-9759-5dd0551c5992"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Funcional</td></tr><tr id="771b3e50-3e91-425c-be1f-b9fefd27bc98"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Ingresar a un producto de la lista
+3_Agregar el producto al carro
+4_Ir al carro
+5_Sumar una cantidad mayor de 2 del mismo tipo de producto
+6_Dar click al boton “update”</td></tr><tr id="87248f1c-47d9-432b-a781-30e44b4e6f98"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página queda colgada</td></tr><tr id="d768aed5-f064-4ae3-b8ee-127bad701191"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Al dar click al boton “update” que el valor del producto se multiplique por la cantidad de unidades indicada por el usuario</td></tr></tbody></table><figure id="ee15c272-194c-4cef-b025-d14a38475421" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/1.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/1.gif"/></a></figure><figure id="9f9701fa-ce30-4985-bfd2-b85f226b2fce" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/1.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/1.png"/></a></figure><hr id="a7303a6b-9cb6-46c4-a38a-3f33f0ffdc04"/><p id="b0376c97-8d80-4e47-927c-80177942e3f8" class="">
+</p><table id="d3bf6ce9-8ddd-41cd-bf12-c0d5bebbd681" class="simple-table"><tbody><tr id="fa7d424f-5bf9-4580-ad43-9c2431d79db9"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">5</td></tr><tr id="00c8f614-9dbc-462b-8eca-c61a343ad714"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Filtro de precios no funciona</td></tr><tr id="67963554-915d-4096-8560-54c1cef40628"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página, ir al panel derecho e intentar hacer click en cualquiera de los valores del filtro por precio, la página no hace nada</td></tr><tr id="c7b3cbe0-2bff-444a-a5da-f6a3ccdf837f"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="f3cb3653-c758-476f-b59a-f4693b0e867e"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-yellow">Media</mark></td></tr><tr id="a2f50bb2-458d-48d7-9ce0-38de9b6b02ce"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Funcional</td></tr><tr id="1cdf34ab-9276-4d77-a34f-032bef7d181e"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Ir al panel derecho de la página
+3_Hacer click a cualquier valor del filtro de precios</td></tr><tr id="9387af5f-eaf4-47f0-8a9b-84b9c788fdea"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página no hace nada</td></tr><tr id="b951b8a3-cf0f-4803-be4e-4b7203dfccce"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Se espera que la lista de productos se filtre según el rango de precio seleccionado por el usuario</td></tr></tbody></table><figure id="339ff0c1-d10b-46dd-945d-465b0082e105" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/4.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/4.gif"/></a></figure><figure id="acac4812-dd3b-422e-ae2c-e27aba88fd4c" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F4.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/F4.png"/></a></figure><hr id="d79f5682-48d6-47ba-a9e2-e56002117ef5"/><p id="6ce34b98-3c6e-4502-9ebc-d9e9956eb053" class="">
+</p><table id="5d1343cd-5558-40a8-8535-00d48cabc983" class="simple-table"><tbody><tr id="6de794b0-2e72-47d5-8cf0-d5b59a9b67c2"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">6</td></tr><tr id="e2e69d1c-7964-48cc-859b-1b4d163a55d9"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">El formulario para ingresar con una cuenta de usuario no funciona</td></tr><tr id="03bd98ee-a8b3-4a43-871c-ad1a9b3580e8"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al ingresar a la página, ir al panel derecho, deslizarse hasta el panel de ingreso de usuario, al hacer click al boton para validar los datos sea con datos o no, la página se vuelve a cargar</td></tr><tr id="fd41bfac-3992-4e20-81f1-0c399b8375b9"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="d30cf2f7-3ca2-423f-a72d-d83fd3acc0f4"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-teal">Baja</mark></td></tr><tr id="8a5faa28-7837-4e79-8f8c-bc51cfc87660"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Visual</td></tr><tr id="1e1a3b5d-dbba-46f7-985e-cfaf7ce337a4"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Ir al panel derecho de la página
+3_Hacer click al botón para validar los datos e ingresar con una cuenta</td></tr><tr id="795dd2d1-42a4-4615-864d-36b39abb24f5"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página se recarga</td></tr><tr id="18177165-2127-45b2-a3aa-aec2b90000d6"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Que se validen los datos y se ingrese con el usuario si este esta registrado</td></tr></tbody></table><p id="7f72327d-abda-41b6-8935-42afef0aa397" class="">Capturas:
+</p><figure id="967e4b28-1f36-42fc-992c-9d852670c822" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F9.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/F9.gif"/></a></figure><figure id="847e6864-4bd6-4e8e-9bf6-c6ae01855b3d" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F9.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/F9.png"/></a></figure><hr id="1d37cbd4-e54c-42d5-b540-bbbfcfa13fc7"/><p id="c096c948-47b1-4091-8c20-f47e8b021a21" class="">
+</p><table id="0bc05dfa-ecb3-4243-801e-bad47c251f49" class="simple-table"><tbody><tr id="bd844038-10d6-4425-8f35-784735c7b57f"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">7</td></tr><tr id="8cddee7b-317e-49e4-b9b0-e2adb36cd1e1"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">El formulario para ingresar con una cuenta de usuario no funciona</td></tr><tr id="5bf362e1-9409-4baa-a954-858eecc85227"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Las imágenes de algunos elementos tienen espacio innecesario debajo</td></tr><tr id="a80f8390-cb5e-4453-9584-f9cfc6ccdee2"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="e2ba2411-425c-4e77-abea-bd6492ca8e1a"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-teal">Baja</mark></td></tr><tr id="9fce7c96-7933-402e-9f63-d1cc6ec9631f"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Visual</td></tr><tr id="9db2bfba-30ea-4ea4-9c70-ea901f5b36c4"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Visualizar algunos elementos en particular de la lista</td></tr><tr id="8e763380-99b8-4e7c-ad66-e9b1fd2f51e7"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La imagenes de los productos en el grid de productos tienen un espacio en blanco innecesario</td></tr><tr id="fb4c14df-cbec-45bb-972a-b87d7e4f1848"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Que las imagenes se visualicen de forma normal y orgánica </td></tr></tbody></table><figure id="6718d76a-ecbe-442e-9ab1-bb86e48bc977" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F8.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/F8.gif"/></a></figure><figure id="6dfe1e1c-2eab-42dd-8279-de86e6e96828" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/8.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/8.png"/></a></figure><p id="6459114d-b2a9-44e4-a8ba-521a37cdb5ff" class="">
+</p><hr id="ef2364ee-e5fe-4cbc-a86e-58560301b1ab"/><table id="a3ec2285-0883-4bb9-a2d2-5338db20a9b8" class="simple-table"><tbody><tr id="04005dac-56df-43ac-892f-ff9143781450"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">8</td></tr><tr id="3edb24e7-bd54-443a-9842-b5a9006c8fa4"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">Botón para retornar a la tienda </td></tr><tr id="1e2d173d-d9f7-4bb5-bfb7-f9f83561eac5"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">Al hacer click en el botón para retornar a la tienda luego de eliminar items del carrito, la página deja de funcionar</td></tr><tr id="a2e16001-810f-4317-b3a8-3c367f9e635a"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="667237c3-d509-450b-a41e-c49595f636af"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-teal">Baja</mark></td></tr><tr id="57b1a3cb-87b9-4e33-bd4e-eda8e96f80ce"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Contenido</td></tr><tr id="34dcdd7e-8614-42cd-a5a6-1aba9f9cb50b"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Agregar cualquier producto al carro
+3_Ingresar al carro
+4_Eliminar el item
+5_Hacer click el botón para retornar a la tienda</td></tr><tr id="84320068-8375-47b3-9d53-9f3c4c53c0d1"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La página queda colgada</td></tr><tr id="a2a3fed6-daec-4203-a7ce-fd382451eac4"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">El botón debe enviar al usuario de nuevo a la tienda para que siga comprando</td></tr></tbody></table><figure id="74c0fdd6-50b6-41b8-abd4-0a9273c6a557" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F15.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/F15.gif"/></a></figure><figure id="2d87308e-1378-48e8-833c-4fe5480ef7cb" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/15.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/15.png"/></a></figure><p id="8f4c6473-7430-4e51-97f6-ec61a9ab2dbc" class="">
+</p><hr id="12273abb-6f69-494a-b37b-4badbffa6cb1"/><table id="1fcdf55c-9604-438c-a84d-0d85c9c97eb0" class="simple-table"><tbody><tr id="c6742260-0f6e-45fe-8d11-ef2bf5f9ff71"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">9</td></tr><tr id="e7b55174-dac4-45c1-b893-c0f72ef518e6"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">El título del botón Iniciar sesión está desalineado verticalmente</td></tr><tr id="e80ad21f-9aa1-45b0-bb50-8d151aa2c128"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">En la sección de registro, se ve que el texto del botón del formulario para ingresar con una cuenta esta visualmente más abajo de lo necesario</td></tr><tr id="566766c9-d1a4-473e-9548-ee0539c81541"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="441b8254-e5a5-4b0a-9a7c-cf8891a3cdd3"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-teal">Baja</mark></td></tr><tr id="ce797141-4212-42bf-8056-d7140940fcfc"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">Funcional</td></tr><tr id="eebdf759-b396-4efd-b10f-26ed41fcdc19"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Haga clic en el vínculo Buscar errores en la barra de navegación
+3_Abrir un producto
+4_Desplazarce hasta la parte inferior y buscar el formulario de inicio de sesión en el menú del lado derecho
+5_Ingresar cualquier nombre de usuario y contraseña que no esté registrado y haga clic en &quot;Iniciar sesión”</td></tr><tr id="3b87bf66-fe21-4956-b34e-3809c46cfdd6"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">El botón esta visualmente desalineado</td></tr><tr id="fd0040ad-0556-41b8-a9c0-cc5ae1112c4c"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Que el visualmente el botón este bien alineado</td></tr></tbody></table><figure id="9614a962-f492-40ff-bf7e-0fcf1131e0ca" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/F7.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/F7.gif"/></a></figure><figure id="b2adc327-cd0d-46fb-8f5a-6b97781389fa" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/7.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/7.png"/></a></figure><hr id="eb4eeb5e-435f-4ac7-84b9-268520070ea1"/><p id="63350dd6-4c5d-4d3f-9b41-7d6e71cec261" class="">
+</p><table id="c0e1dfeb-3703-4793-b26b-06ffd8136cdb" class="simple-table"><tbody><tr id="9d5351c1-55bd-4154-a8db-0c8644838313"><th id="MF=X" class="simple-table-header-color simple-table-header">ID</th><td id="Pr\?" class="" style="width:592px">10</td></tr><tr id="c6b1495a-f6c5-4912-ab41-bdf826f6d568"><th id="MF=X" class="simple-table-header-color simple-table-header">Titulo</th><td id="Pr\?" class="" style="width:592px">La breve descripción y la descripción del producto no están en inglés.</td></tr><tr id="2faf7b1b-9553-45d0-8cc3-29575b03342b"><th id="MF=X" class="simple-table-header-color simple-table-header">Descripción</th><td id="Pr\?" class="" style="width:592px">En la descripción del producto se ve que el idioma no es el correcto, no esta en inglés</td></tr><tr id="1d1a17e8-67d2-486c-8d23-320c835f4136"><th id="MF=X" class="simple-table-header-color simple-table-header">Precondiciones</th><td id="Pr\?" class="" style="width:592px">Un navegador web</td></tr><tr id="2e0499b8-f830-4da4-8361-ac91b4ce80b9"><th id="MF=X" class="simple-table-header-color simple-table-header">Criticidad</th><td id="Pr\?" class="" style="width:592px"><mark class="highlight-yellow">Medio</mark></td></tr><tr id="cc2038d1-9ba6-4b6d-ac36-3249b1cdf59a"><th id="MF=X" class="simple-table-header-color simple-table-header">Tipo de defecto</th><td id="Pr\?" class="" style="width:592px">UX/UI</td></tr><tr id="5d6fef0e-0796-4a69-bd06-6cc9cb614c9d"><th id="MF=X" class="simple-table-header-color simple-table-header">Pasos</th><td id="Pr\?" class="" style="width:592px">1_Ingresar a <a href="https://academybugs.com/find-bugs/#">https://academybugs.com/find-bugs/</a>
+2_Hacer click a un producto
+3_Ver la descripción</td></tr><tr id="0668ffd7-6159-4175-b6d8-69c69e75b20c"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado obtenido</th><td id="Pr\?" class="" style="width:592px">La descripción esta en un idioma que no es el inglés</td></tr><tr id="33966521-72df-49ca-865a-f0b768c3ccd6"><th id="MF=X" class="simple-table-header-color simple-table-header">Resultado esperado</th><td id="Pr\?" class="" style="width:592px">Se espera que la descripción del producto este en inglés</td></tr></tbody></table><figure id="4b6e8ca9-58d0-4543-a793-3ca2999de207" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/Find-13.gif"><img src="https://academybugs.com/wp-content/uploads/2020/10/Find-13.gif"/></a></figure><figure id="f10b3df1-f01c-4fd7-a6a1-3d8c815711d0" class="image"><a href="https://academybugs.com/wp-content/uploads/2020/10/Find-13.png"><img src="https://academybugs.com/wp-content/uploads/2020/10/Find-13.png"/></a></figure></div></article></body></html>
