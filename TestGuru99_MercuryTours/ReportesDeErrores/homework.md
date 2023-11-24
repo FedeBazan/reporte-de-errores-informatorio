@@ -436,6 +436,164 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/da0
 </table>
 <hr>
 
+<table>
+  <tr>
+    <th>Reporte n°6</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-006</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Al selecconar el tpo de vuelo no se modfca el formulario</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>Cuando se quiere registrar un vuelo en "Flights" en la seccion de Flight Details,
+    al hacer clicck en el check "One Way" se deberia bloquear o esconder la posibilidad de elegir
+    una fecha de retorno, esto puede acarrear problemas a la hora de cargar el vuelo en el sistema.</td>
+  </tr>
+  <tr>
+    <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Visual</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>media</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Visualizar el Link "Flights" Ubicado en el menu lateral izquierdo y hacer click</li>
+     <li> 3-Dar check en Type, seleccionando "One Way"</li>
+    </ul></td>
+  </tr>
+  <tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>Se debe bloquear o esconder la posibilidad de rellenar los datos de Returning</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>Los datos de Returning continua funcional a pesar de seleccionar "One Way"</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En Espera</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     ![Opera Captura de pantalla_2023-11-24_180913_demo guru99 com](
+     https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/a93876cc-6142-4183-8c97-a13e9c9966b9
+     )
+
+   </td>
+  </tr>
+  <tr>
+    <td>Mejora</td>
+    <td>Se recomienda el bloqueo de la celda una vez se seleccione "One Way"</td>
+  </tr>
+<!-- ----------------------------------------------------------------------------------------- -->
+<hr>
+<table>
+  <tr>
+    <th>Reporte n°7</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-007</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Registro exitoso con campos vacios ni verificaciones</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>Se puede realizar un registro sin rellenar ningun campo ni controlando que los datos ingresados sean los indicados para cada campo del registro.</td>
+  </tr>
+  <tr>
+    <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Funcional</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Visualizar el Link "REGISTER" Ubicado en el menu-navegador y hacer click</li>
+     <li> 3-Verificar la redireccion a la pagina: https://demo.guru99.com/test/newtours/register.php</li>
+     <li> 4-Visualizar el Boton "Submit" y hacer click</li>
+     <li> 5-Redirecciona a : https://demo.guru99.com/test/newtours/register_sucess.php , mostrando un mensaje de registre satisfactorio.</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>Aparecen alertas o advertencias de campos vacios al intentar enviar la solicitud de registro</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>La solicitud  de registro se envia aún con campos vacios.</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En espera</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     
+
+https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/2ff2d9f0-f5c3-4ca0-b8de-ec6a996c3864
+
+
+   </td>
+  </tr>
+  <tr>
+    <td>Mejora</td>
+    <td>Es posible corregir el error tocando el HTML y verificando la solicitud de cada campo del formulario y su relleno obligatorio en los campos que se requieran</td>
+  </tr>
+</table>
 <!--
 <table>
   <tr>
