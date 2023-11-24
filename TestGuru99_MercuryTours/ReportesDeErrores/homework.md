@@ -252,15 +252,103 @@ cunado todo deberia estar distribuido en lo ancho de la página </td>
     <td>
      ![Opera Captura de pantalla_2023-11-24_004902_demo guru99 com](https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/73a8710b-1cb3-4119-9396-ce9769034c9e)
     </td>
+<tr>
+    <td>Mejora</td>
+    <td>Es posible solucionarlo si se ve el archivo style de la pagina</td>
+  </tr>
   </tr>
 </table>
 <!-- ----------------------------------------------------------------------------- -->
 <hr>
+<table>
+  <tr>
+    <th>Reporte n°4</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-004</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Deslogeo automatico del usuario al volver al Home</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>Una vez el usuario se logea con un username y password validos, al verificar la conexion 
+     si se queire volver al "home" se desconecta automaticamente.</td>
+  </tr>
+  <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+     <li>Usuario válido</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Funcional</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Media</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>
+     <ul>
+      <li>Username: fedeusertest91</li>
+      <li>Password: teodiobenedetto</li>
+     </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Logearse con usuario y password de <Datos de entrada></li>
+     <li> 3-Visualizar el mensaje de usuario logeado ccorrectamente.</li>
+     <li> 4-Hacer click en "home" del menu lateral izquierdo.</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>El usuario al logearse debe guardarse su estado en todas las ventanas de la pagina
+     hasta que este se deslogeé.</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>El usuario puede deslogearse visitando la pestaña Home del menu</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En revision</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     
 
+https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/da069d77-a693-407c-9f64-c905a8615af5
+    
+  </td>
+<tr>
+    <td>Mejora</td>
+    <td>Se debe guardar el estado del usuario, revisar trabajo de conexion entre web y bd. </td>
+  </tr>
+  </tr>
+</table>
+<!-- ----------------------------------------------------------------------------- -->
+<hr>
 <!--
 <table>
   <tr>
-    <th>Reporte n°2</th>
+    <th>Reporte n°XXXX</th>
     <th></th>
   </tr>
   <tr>
