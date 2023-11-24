@@ -13,23 +13,29 @@ public class Home {
 
     WebDriver driver;
     By imgHomeXpath = By.xpath("/html/body/div[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/p[1]/img");
+    By yourDestinationLink = By.linkText("your destination");
 
-    @Before
-    public void setUp(){
-        driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver","./src/main/java/webdriver/chromedriver.exe");
-        driver.get("https://demo.guru99.com/test/newtours/index.php");
+    By businessTravelXpath = By.xpath("/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/form/table/tbody/tr[12]/td/table/tbody/tr/td/font/a[1]");
+
+    public Home(WebDriver driver) {
+        this.driver=driver;
     }
-
-    @After
-    public void tearDown(){
-        driver.quit();
-    }
-
 
     public void testUp(){
         assertTrue(driver.findElement(imgHomeXpath).isDisplayed());
     }
 
-    
+    /*Reporte n°1*/
+    public void runReport1(){
+        driver.findElement(yourDestinationLink).click();
+        testUp();
+    }
+
+    /*Reporte n°2*/
+    public void runReport2(){
+        Base base = new Base(driver);
+        driver.findElement(businessTravelXpath).click();
+        base.isDisplayedError();
+    }
+
 }
