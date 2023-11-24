@@ -17,6 +17,10 @@ public class Home {
 
     By businessTravelXpath = By.xpath("/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/form/table/tbody/tr[12]/td/table/tbody/tr/td/font/a[1]");
 
+    By usernameInputName = By.name("userName");
+    By passwordInputName = By.name("password");
+    By submitBtmName = By.name("submit");
+    By signOnLinkText = By.linkText("SIGN-ON");
     public Home(WebDriver driver) {
         this.driver=driver;
     }
@@ -38,5 +42,15 @@ public class Home {
         base.isDisplayedError();
     }
 
+    public void clearLoginInputs(){
+        driver.findElement(usernameInputName).clear();
+        driver.findElement(passwordInputName).clear();
+    }
+    public void clickOnSubmitBtm(){
+        driver.findElement(submitBtmName).click();
+    }
 
+    public void clickOnSignOnNav(){
+        driver.findElement(signOnLinkText).click();
+    }
 }

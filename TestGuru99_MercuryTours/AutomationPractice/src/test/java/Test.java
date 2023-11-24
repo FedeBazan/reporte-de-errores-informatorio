@@ -1,5 +1,7 @@
 import mercurytour.Base;
 import mercurytour.Home;
+import mercurytour.LoginSucess;
+import mercurytour.SignOn;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -41,5 +43,27 @@ public class Test {
     public void runTestReport3() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    /*Reporte 4 - way 1*/
+    @org.junit.Test
+    public void runTestReport4_1(){
+        Home home = new Home(driver);
+        LoginSucess loginSucess = new LoginSucess(driver);
+        home.clearLoginInputs();
+        home.clickOnSubmitBtm();
+        loginSucess.isDisplayedLoginSuccessfully();
+    }
+
+    /*Reporte 4 - way 2*/
+    @org.junit.Test
+    public void runTestReport4_2(){
+        Home home = new Home(driver);
+        SignOn signOn = new SignOn(driver);
+        LoginSucess loginSucess =new LoginSucess(driver);
+        home.clickOnSignOnNav();
+        signOn.clearLoginInputs();
+        signOn.clickOnSubmitBtm();
+        loginSucess.isDisplayedLoginSuccessfully();
     }
 }
