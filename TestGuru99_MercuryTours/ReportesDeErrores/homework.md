@@ -37,11 +37,167 @@ fecha: 06/11/2023
   </tr>
   <tr>
     <td>ID</td>
-    <td>Ingresar ID</td>
+    <td>GR99-001</td>
   </tr>
   <tr>
     <td>Titulo</td>
-    <td>Ingresar Titulo</td>
+    <td>Hipertexto sin vinculacion ni alerta</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>La pagina web no redirecciona a otra pagina ni muestra mensaje de alerta al hacer click en "your destination"</td>
+  </tr>
+  <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>REPASAR</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critica</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Visualizar el hipertexto "your destination"</li>
+     <li> 3-Hacer click en "your destination"</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>Debe mostrar la pagina con destinos disponibles o mostrar un alerta </td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>Redirecciona a la misma pagina : https://demo.guru99.com/test/newtours/index.php</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En Espera</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+
+https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/e9b859a3-cac7-4ac3-8929-796c1ee0c2a4
+
+</td>
+  </tr>
+ <tr>
+    <td>Mejora</td>
+    <td>Revisar en el HTML el enlace linkeado</td>
+  </tr>
+</table>
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+<hr>
+<table>
+  <tr>
+    <th>Reporte n°2</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-002</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Link redirecciona a una página inexistente</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>El hipertexto ubicados en la seccion de "Links" "Business Travel @ About.com", redirecciona a una página inexistente</td>
+  </tr>
+  <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Disruptivo</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Visualizar el hipertexto "Business Travel @ About.com"</li>
+     <li> 3-Hacer click en "Business Travel @ About.com"</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>Redirecciona a un link valido</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>Redirecciona a una pagina inexistente</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En Espera</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     
+
+https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/f07bb830-b3bb-4055-82f1-4f8c433eafeb
+<tr>
+    <td>Mejora</td>
+    <td>Revisar en el HTML el enlace linkeado</td>
+  </tr>
+
+</td>
+  </tr>
+
+
+
+</table>
+
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<hr>
+<!--
+<table>
+  <tr>
+    <th>Reporte n°2</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-002</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td></td>
   </tr>
   <tr>
     <td>Descripcion</td>
@@ -49,10 +205,14 @@ fecha: 06/11/2023
   </tr>
   <tr>
     <td>Precondiciones</td>
-    <td></td>
+    <td> </td>
   </tr>
  <tr>
     <td>Tipo de Bug</td>
+    <td><b>REPASAR</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
     <td></td>
   </tr>
   <tr>
@@ -83,19 +243,4 @@ fecha: 06/11/2023
     <td>Img o Vid</td>
     <td></td>
   </tr>
-</table>
-<!--
-|CASO 1                    |                                                                                                                                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ID                 |  TP-001
-| Título             |  Pruebas de la Tabla                                                                                                                                                                         |
-| Descripción        |  asdasdasdasdasdasdasd                                                                                            |
-| Precondiciones     |  asdasdasdasd
-| Prioridad          |
-| Datos de Entrada   |
-| Pasos              | |
-| Resultado esperado |                                                                                                                                 |
-| Resultado obtenido | 
-| Estado             |
-| Img o Video        |
--->
+</table>-->
