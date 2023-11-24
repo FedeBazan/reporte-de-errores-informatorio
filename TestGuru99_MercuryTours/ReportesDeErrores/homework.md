@@ -187,10 +187,75 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/f07
 
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <hr>
-
-![scorpionContinuamosTrabajando](
-https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/05054dd1-abce-41ec-8ab8-afe804cdfa48
-)
+<table>
+  <tr>
+    <th>Reporte n°3</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-003</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Incorrecta distribucion visual de la página</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>Al colocar en pantalla completa la pagina se puede ver que todo el contenido se encuentra empujado hacia la izquierda, 
+cunado todo deberia estar distribuido en lo ancho de la página </td>
+  </tr>
+  <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Visual</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>No Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><ul>
+     <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
+     <li> 2-Maximizar o agrandar la ventana del navegador.</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>La pagina debe observarse con una correcta distribucion</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>El contenido de la pagina se encuentra amontonado a la Izquierda</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En proceso</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     ![Opera Captura de pantalla_2023-11-24_004902_demo guru99 com](https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/73a8710b-1cb3-4119-9396-ce9769034c9e)
+    </td>
+  </tr>
+</table>
+<!-- ----------------------------------------------------------------------------- -->
+<hr>
 
 <!--
 <table>
