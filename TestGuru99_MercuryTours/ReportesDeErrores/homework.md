@@ -187,6 +187,11 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/f07
 
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <hr>
+
+![scorpionContinuamosTrabajando](
+https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/05054dd1-abce-41ec-8ab8-afe804cdfa48
+)
+
 <!--
 <table>
   <tr>
