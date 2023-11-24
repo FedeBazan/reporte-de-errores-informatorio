@@ -45,7 +45,7 @@ public class Test {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    /*Reporte 4 - way 1*/
+    /*Reporte 5 - way 1*/
     @org.junit.Test
     public void runTestReport4_1(){
         Home home = new Home(driver);
@@ -55,7 +55,7 @@ public class Test {
         loginSucess.isDisplayedLoginSuccessfully();
     }
 
-    /*Reporte 4 - way 2*/
+    /*Reporte 5 - way 2*/
     @org.junit.Test
     public void runTestReport4_2(){
         Home home = new Home(driver);
