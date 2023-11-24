@@ -347,12 +347,12 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/da0
 <hr>
 <table>
   <tr>
-    <th>Reporte n°4</th>
+    <th>Reporte n°5</th>
     <th></th>
   </tr>
   <tr>
     <td>ID</td>
-    <td>GR99-004</td>
+    <td>GR99-005</td>
   </tr>
   <tr>
     <td>Titulo</td>
