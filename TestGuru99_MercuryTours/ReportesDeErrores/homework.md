@@ -5,9 +5,9 @@ fecha: 06/11/2023
 </h3>
 <p>Consigna:</p>
 <ul>
- <li>Utilizando la pagina : <a href="https://demo.guru99.com/test/newtours/index.php" target="_blank"> Guru99-MercuryTravel </a>
- se debarám buscar, como minimo 7 errores.</li>
- <li>Hacer el reporte y subirlo a Github a través de PR a <a href="https://github.com/Tusuegra510/reporte-de-errores-informatorio/tree/testing" target="_blank"> Repositorio Playgroundt</a>
+ <li>Utilizando la página : <a href="https://demo.guru99.com/test/newtours/index.php" target="_blank"> Guru99-MercuryTravel </a>
+ se debarán buscar, como mínimo 7 errores.</li>
+ <li>Hacer el reporte y subirlo a Github a través de PR a <a href="https://github.com/Tusuegra510/reporte-de-errores-informatorio/tree/testing" target="_blank"> Repositorio Playground de Seba</a>
  </li>
 </ul>
 
@@ -28,7 +28,7 @@ fecha: 06/11/2023
 
 <hr>
 
-<h3 style="text-align: center;">Tester Asignado: Bazan, Julio Pablo Federico</h3>
+<h3>Tester Asignado: Bazan, Julio Pablo Federico</h3>
 
 <table>
   <tr>
