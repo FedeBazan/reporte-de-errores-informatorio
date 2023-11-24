@@ -27,7 +27,7 @@ fecha: 06/11/2023
 <p>Puede agregar cualquier tipo de información extra que considere necesario.</p>
 
 <hr>
-<p><b>Nota off-topic</b> : Los reportes se encuentran Automatizados con Chrome utilizando Java y Selenium en <a href="https://github.com/FedeBazan/reporte-de-errores-informatorio/blob/Fede_Bazan/TestGuru99_MercuryTours/AutomationPractice/src/test/java/Test.java">TestDocument</a></p>
+<p><b>Nota off-topic</b> : Los reportes se encuentran Automatizados con Chrome utilizando Java y Selenium en <a href="https://github.com/FedeBazan/reporte-de-errores-informatorio/blob/Fede_Bazan/TestGuru99_MercuryTours_06-11-23/AutomationPractice/src/test/java/Test.java">TestDocument</a></p>
 <hr>
 <h3>Tester Asignado: Bazan, Julio Pablo Federico</h3>
 
