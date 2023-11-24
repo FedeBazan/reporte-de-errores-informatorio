@@ -311,7 +311,7 @@ cunado todo deberia estar distribuido en lo ancho de la página </td>
     <td>Pasos</td>
     <td><ul>
      <li> 1-Ingresar a la web: https://demo.guru99.com/test/newtours/index.php </li>
-     <li> 2-Logearse con usuario y password de <Datos de entrada></li>
+     <li> 2-Logearse con usuario y password de "Datos de entrada"</li>
      <li> 3-Visualizar el mensaje de usuario logeado ccorrectamente.</li>
      <li> 4-Hacer click en "home" del menu lateral izquierdo.</li>
     </ul></td>
