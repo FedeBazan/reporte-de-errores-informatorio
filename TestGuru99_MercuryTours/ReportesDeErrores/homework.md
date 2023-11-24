@@ -345,6 +345,97 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/da0
 </table>
 <!-- ----------------------------------------------------------------------------- -->
 <hr>
+<table>
+  <tr>
+    <th>Reporte n°4</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>GR99-004</td>
+  </tr>
+  <tr>
+    <td>Titulo</td>
+    <td>Mensaje de login exitoso con campos vacios</td>
+  </tr>
+  <tr>
+    <td>Descripcion</td>
+    <td>Se puede obtener un login exitoso sin poner dato alguno en los campos de usernmae y password, 
+     este caso ocurre tanto en el "Home" como en el "Sign-On" de la web</td>
+  </tr>
+  <tr>
+    <td>Precondiciones</td>
+    <td><ul>
+     <li>Navegador: Opera Gx LVL 5 (core 104.0.4944.74)</li>
+     <li>OS: Windows 10 Version 22H2</li>
+    </ul> </td>
+  </tr>
+ <tr>
+    <td>Tipo de Bug</td>
+    <td><b>Funcional</b></td>
+  </tr>
+<tr>
+    <td>Criticidad</td>
+    <td>Critico</td>
+  </tr>
+  <tr>
+    <td>Prioridad</td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td>Datos de Entrada</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pasos</td>
+    <td><b>Camino 1</b>
+    <ul>
+     <li> 1- Entrar a la web: https://demo.guru99.com/test/newtours/index.php</li>
+     <li> 2- Visualizar el boton "submit" ubicado en el menu lateral derecho dentro del item "Find A Flight"</li>
+     <li> 3-Confirmar la visualizacion de "Login Successfully" </li>
+    </ul>
+    </td>
+    <td><b>Camino 2</b>
+     <ul>
+     <li> 1- Entrar a la web: https://demo.guru99.com/test/newtours/index.php</li>
+     <li> 2- Visualizar el boton "SIGN-ON" ubicado en el menu navegador de la pagina y hacer click.</li>
+     <li> 3- Dar click en Submit, sin rellenar ningun campo.(Redireccionado a https://demo.guru99.com/test/newtours/login.php)</li>
+     <li> 4-Confirmar la visualizacion de "Login Successfully" </li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Resultado Esperado</td>
+    <td>En ambos caso se debe mostrar un alerta o un mensaje que pida que se deben rellenar los campos.</td>
+  </tr>
+  <tr>
+    <td>Resultado Obtenido</td>
+    <td>Login exitoso para ambos caminos</td>
+  </tr>
+  <tr>
+    <td>Estado</td>
+    <td>En Espera</td>
+  </tr>
+  <tr>
+    <td>Img o Vid</td>
+    <td>
+     
+   https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/4de216b7-3ed4-47a2-a4be-ef36cf6f2276
+    
+   </td>
+    <td>
+     
+  https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/aab3aa6a-8f81-4334-bfa3-2e55d015247f
+  
+   </td>
+  </tr>
+  <tr>
+    <td>Mejora</td>
+    <td>Es posible corregir esta falla haciendo que los campos "username" y "password" sean obligatorios. </td>
+  </tr>
+</table>
+<hr>
+
 <!--
 <table>
   <tr>
@@ -402,5 +493,9 @@ https://github.com/FedeBazan/reporte-de-errores-informatorio/assets/48597230/da0
   <tr>
     <td>Img o Vid</td>
     <td></td>
+  </tr>
+  <tr>
+    <td>Mejora</td>
+    <td>Se debe guardar el estado del usuario, revisar trabajo de conexion entre web y bd. </td>
   </tr>
 </table>-->
