@@ -41,11 +41,12 @@ fecha: 06/11/2023
   </tr>
   <tr>
     <td>Titulo</td>
-    <td>Hipertexto sin vinculacion ni alerta</td>
+    <td>Hipertexto sin vinculacion correspondiente</td>
   </tr>
   <tr>
     <td>Descripcion</td>
-    <td>La pagina web no redirecciona a otra pagina ni muestra mensaje de alerta al hacer click en "your destination"</td>
+    <td>La pagina web no redirecciona a otra pagina ni muestra mensaje de alerta al hacer click en "your destination",
+    mantiene la direccion del home. (https://demo.guru99.com/test/newtours/index.php)</td>
   </tr>
   <tr>
     <td>Precondiciones</td>
