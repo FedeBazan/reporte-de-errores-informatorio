@@ -21,6 +21,9 @@ public class Home {
     By passwordInputName = By.name("password");
     By submitBtmName = By.name("submit");
     By signOnLinkText = By.linkText("SIGN-ON");
+    By homeLeftnavBtm = By.linkText("Home");
+
+
     public Home(WebDriver driver) {
         this.driver=driver;
     }
@@ -52,5 +55,19 @@ public class Home {
 
     public void clickOnSignOnNav(){
         driver.findElement(signOnLinkText).click();
+    }
+
+    public void loginUserOn(String username,String password){
+        clearLoginInputs();
+        driver.findElement(usernameInputName).sendKeys(username);
+        driver.findElement(passwordInputName).sendKeys(password);
+        driver.findElement(submitBtmName).click();
+    }
+    public void returnHomePage(){
+        driver.findElement(homeLeftnavBtm).click();
+    }
+
+    public void isDisplayedSignLoginBtm(){
+        assertTrue(driver.findElement(signOnLinkText).isDisplayed());
     }
 }

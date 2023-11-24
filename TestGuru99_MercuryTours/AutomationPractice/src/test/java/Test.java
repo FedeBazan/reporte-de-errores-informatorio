@@ -11,6 +11,8 @@ import java.time.Duration;
 
 public class Test {
     WebDriver driver;
+    private String username="fedeusertest91";
+    private String password="teodiobenedetto";
 
     @Before
     public void setUp(){
@@ -43,6 +45,17 @@ public class Test {
     public void runTestReport3() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    /*Reporte n°4*/
+    @org.junit.Test
+    public void runTestReport4(){
+        Home home = new Home(driver);
+        LoginSucess loginSucess = new LoginSucess(driver);
+        home.loginUserOn(username,password);
+        loginSucess.isDisplayedLoginSuccessfully();
+        home.returnHomePage();
+        home.isDisplayedSignLoginBtm();
     }
 
     /*Reporte 5 - way 1*/
